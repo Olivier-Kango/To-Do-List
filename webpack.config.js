@@ -9,12 +9,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'To do List',
+      template: './src/index.html',
     }),
   ],
   mode: 'development',
   output: {
-    filename: "build/[name].js",
+    filename: 'build/[name].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     publicPath: '/',

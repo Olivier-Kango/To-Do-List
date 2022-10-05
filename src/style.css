@@ -1,4 +1,98 @@
-.hello {
-  color: blue;
-  background: gray;
+body {
+  font-family: Tahoma, sans-serif;
+  background: #f6f6f6;
+  color: rgb(61, 61, 61);
+}
+
+.main-title {
+  text-align: center;
+  font-weight: 100;
+}
+
+.container {
+  background: white;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.list {
+  border-bottom: 1px solid #c1c1c3;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 50px;
+  padding: 0 15px;
+}
+
+.fa {
+  display: flex;
+  color: #c1c1c3;
+  align-items: center;
+}
+
+#text-input {
+  width: 90%;
+  border: none;
+  font-style: italic;
+  font-size: medium;
+}
+
+input:focus {
+  outline: none;
+}
+
+.list-check {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+#checkbox {
+  width: 17px;
+  color: #c1c1c3;
+  margin: 0;
+}
+
+#checkbox:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.ul-lists {
+  margin: 0;
+  padding: 0;
+}
+
+.fa-refresh,
+.fa-plus {
+  cursor: pointer;
+}
+
+.fa-ellipsis-v {
+  cursor: move;
+  margin-right: 5px;
+}
+
+.fa:hover {
+  color: black;
+}
+
+button {
+  border: none;
+  height: 50px;
+  margin: 0;
+  width: 100%;
+  font-size: medium;
+  color: #959595;
+}
+
+button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
 }

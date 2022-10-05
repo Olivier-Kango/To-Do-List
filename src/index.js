@@ -1,14 +1,55 @@
+/* eslint-disable no-unused-vars */
 import _ from 'lodash';
 import './style.css';
+/* eslint-enable no-unused-vars */
 
-function component() {
-  const element = document.createElement('div');
+const toDoList = [
+  {
+    description: 'Wash the dishes',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Food',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'Baith',
+    completed: false,
+    index: 3,
+  },
+  {
+    description: 'Sleep',
+    completed: true,
+    index: 4,
+  },
+];
 
-   // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+toDoList.forEach((e) => {
+  const { description, completed, index } = e;
 
-  return element;
-}
+  const ulLists = document.querySelector('.ul-lists');
 
-document.body.appendChild(component());
+  const list = document.createElement('li');
+  list.setAttribute('class', 'list');
+  list.setAttribute('id', index);
+  ulLists.appendChild(list);
+
+  const span = document.createElement('span');
+  span.setAttribute('class', 'list-check');
+  list.appendChild(span);
+
+  const checkbox = document.createElement('input');
+  checkbox.setAttribute('type', 'checkbox');
+  checkbox.checked = completed;
+  span.appendChild(checkbox);
+
+  const paragraph = document.createElement('p');
+  paragraph.textContent = description;
+  span.appendChild(paragraph);
+
+  const ellipsis = document.createElement('i');
+  ellipsis.setAttribute('class', 'fa fa-ellipsis-v');
+  list.appendChild(ellipsis);
+});
