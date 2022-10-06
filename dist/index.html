@@ -1,9 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>To do List</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><script defer src="bundle.js"></script></head>
-  <body>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To do list</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="/build/runtime.js"></script><script defer src="/build/main.js"></script></head>
+<body>
+  <h1 class="main-title">To do list</h1>
+  <div class="container">
+    <div class="list">
+      <p class="to-do">Today's To Do</p>
+      <i class="fa fa-refresh"></i>
+    </div>
+    <form class="list">
+      <input type="text" id="text-input" placeholder="Add to your list..." required>
+      <button type="button" class="add-items-btn">
+        <i class="fa fa-plus"></i>
+      </button>
+    </form>
+    <ul class="ul-lists"></ul>
+    <button class="button">
+      Clear all completed
+    </button>
+  </div>
+</body>
 </html>
