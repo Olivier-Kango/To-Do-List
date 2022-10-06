@@ -1,22 +1,23 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do List
 
-> Description the project. This is a single page web application that keeps tracks of books. Book details captured are the book title, author and ISBN. User can add a book, view a list of books and also remove any un wanted books.
+> In this project, I build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.
 
 ## Screen Short
 
-![awesome_books_full_website](https://user-images.githubusercontent.com/108806646/193831256-d596b14a-3fb2-48cc-9387-144db7d16026.png)
+My list is a clone of the part of the minimalist project captured in the video below.
 
+[![Capstone intro](https://img.youtube.com/vi/AcUd-_Yjjqg/0.jpg)](https://www.youtube.com/watch?v=AcUd-_Yjjqg)
 
 ## Built With
 
 - Languages: HTML, CSS, JavaScript
-- Technologies used: HTML, CSS, JavaScript 
+- Technologies used: HTML, CSS, JavaScript, Webpack 
 
-## Live Demo (if available)
+## Live Demo 
 
-[Live Demo Link](https://olivier-kango.github.io/Awesome-books-ES6/?title=rfrfr&author=rfrfrf)
+[Live Demo Link](http://localhost:8080/)
 
 To get a local copy up and running follow these simple example steps.
 
@@ -36,6 +37,7 @@ To run this app on your local computer you need the browser (Google Chrome is th
 
 - Install VSCode or any code editor you like
 - Install npm by running npm install
+- run: npm start
 
 ## Authors
 
@@ -49,7 +51,7 @@ To run this app on your local computer you need the browser (Google Chrome is th
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Olivier-Kango/Awesome-books-ES6/issues/new).
+Feel free to check the [issues page](https://github.com/Olivier-Kango/To-Do-List/issues/new).
 
 ## Show your support
 
