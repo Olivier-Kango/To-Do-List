@@ -1,10 +1,10 @@
-export let index = 0;
-export const addTask = () => { 
-  index ++;
+let index = 0;
+export default function addTask() {
+  index += index + 1;
   const ulLists = document.querySelector('.ul-lists');
   const list = document.createElement('li');
   list.setAttribute('class', 'list');
-  list.setAttribute('id', `${index}`)
+  list.setAttribute('id', `${index}`);
   ulLists.appendChild(list);
 
   const span = document.createElement('span');
@@ -17,7 +17,6 @@ export const addTask = () => {
   span.appendChild(checkbox);
 
   const paragraph = document.createElement('p');
-  paragraph.textContent = description;
   span.appendChild(paragraph);
 
   const ellipsis = document.createElement('i');
