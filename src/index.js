@@ -3,28 +3,7 @@ import _ from 'lodash';
 import './style.css';
 /* eslint-enable no-unused-vars */
 
-const toDoList = [
-  {
-    description: 'Wash the dishes',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Food',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Baith',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Sleep',
-    completed: true,
-    index: 4,
-  },
-];
+const toDoList = [];
 
 toDoList.forEach((e) => {
   const { description, completed, index } = e;
