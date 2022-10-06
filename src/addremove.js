@@ -1,4 +1,5 @@
 let index = 0;
+export const AddItem = document.getElementById('text-input');
 export default function addTask() {
   index += 1;
   const ulLists = document.querySelector('.ul-lists');
@@ -6,6 +7,9 @@ export default function addTask() {
   list.setAttribute('class', 'list');
   list.setAttribute('id', `${index}`);
   ulLists.appendChild(list);
+  if (AddItem.value === '') {
+    list.style.display = 'none';
+  }
 
   const span = document.createElement('span');
   span.setAttribute('class', 'list-check');
@@ -17,6 +21,7 @@ export default function addTask() {
   span.appendChild(checkbox);
 
   const paragraph = document.createElement('p');
+  paragraph.textContent = AddItem.value;
   span.appendChild(paragraph);
 
   const ellipsis = document.createElement('i');
