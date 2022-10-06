@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import _ from 'lodash';
 import './style.css';
+import './addremove.js';
 /* eslint-enable no-unused-vars */
 
 const toDoList = [];
