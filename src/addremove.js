@@ -1,6 +1,6 @@
 let index = 0;
 export default function addTask() {
-  index += index + 1;
+  index += 1;
   const ulLists = document.querySelector('.ul-lists');
   const list = document.createElement('li');
   list.setAttribute('class', 'list');
