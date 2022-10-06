@@ -14,7 +14,7 @@ module.exports = {
   ],
   mode: 'development',
   output: {
-    filename: "build/[name].js",
+    filename: 'build/[name].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     publicPath: '/',

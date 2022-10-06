@@ -1,3 +1,4 @@
+/* eslint-disable */
 const express = require('express');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -11,7 +12,7 @@ const compiler = webpack(config);
 app.use(
   webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath,
-  })
+  }),
 );
 
 // Serve the files on port 3000.
