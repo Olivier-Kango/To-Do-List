@@ -71,7 +71,7 @@ input:focus {
 
 .fa-ellipsis-v {
   cursor: move;
-  margin-right: 5px;
+  margin-right: 9px;
 }
 
 .fa:hover {
@@ -101,4 +101,9 @@ input:focus {
 .add-items-btn {
   background: none;
   border: none;
+}
+
+
+.fa-refresh {
+  padding-right: 6px;
 }
