@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import _, { add } from 'lodash';
 import './style.css';
-import addTask, { AddItem, index } from './addremove.js';
+import addTask, { AddItem } from './addremove.js';
 /* eslint-enable no-unused-vars */
 
 let toDoList = [];
