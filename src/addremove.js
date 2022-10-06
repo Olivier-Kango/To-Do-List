@@ -1,11 +1,14 @@
-let index = 0;
+// Implement a function for adding a new task (add a new element to the array).
+export const toDoList = [];
+
+let i = 0;
 export const addItem = document.getElementById('text-input');
 export default function addTask() {
-  index += 1;
+  i += 1;
   const ulLists = document.querySelector('.ul-lists');
   const list = document.createElement('li');
   list.setAttribute('class', 'list');
-  list.setAttribute('id', `${index}`);
+  list.setAttribute('id', `${i}`);
   ulLists.appendChild(list);
   if (addItem.value === '') {
     list.style.display = 'none';
@@ -27,4 +30,12 @@ export default function addTask() {
   const ellipsis = document.createElement('i');
   ellipsis.setAttribute('class', 'fa fa-ellipsis-v');
   list.appendChild(ellipsis);
+
+  let hash = {
+    description: addItem.value,
+    index: i,
+    completed: false,
+  }
+
+  toDoList.push(hash);
 }
