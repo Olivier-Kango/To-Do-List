@@ -6,8 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To do list</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <h1>Hello Kango</h1>
+  <h1 class="main-title">To do list</h1>
+  <div class="container">
+    <div class="list">
+      <p class="to-do">Today's To Do</p>
+      <i class="fa fa-refresh"></i>
+    </div>
+    <div class="list">
+      <input type="text" id="text-input" placeholder="Add to your list...">
+      <i class="fa fa-plus"></i>
+    </div>
+    <ul class="ul-lists"></ul>
+    <button>
+      Clear all completed
+    </button>
+  </div>
 </body>
 </html>
