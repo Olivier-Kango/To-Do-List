@@ -1,35 +1,26 @@
 /* eslint-disable no-unused-vars */
-import _ from 'lodash';
+import _, { add } from 'lodash';
 import './style.css';
-import './addremove.js';
+import { addTask } from './addremove.js';
+import { index } from './addremove.js';
 /* eslint-enable no-unused-vars */
 
-const toDoList = [];
 
-toDoList.forEach((e) => {
-  const { description, completed, index } = e;
 
-  const ulLists = document.querySelector('.ul-lists');
+let toDoList = [];
 
-  const list = document.createElement('li');
-  list.setAttribute('class', 'list');
-  list.setAttribute('id', index);
-  ulLists.appendChild(list);
+// Add and Remove
+const AddBtn = document.querySelector('.add-items-btn');
+const AddItem = document.querySelector('#text-input');
 
-  const span = document.createElement('span');
-  span.setAttribute('class', 'list-check');
-  list.appendChild(span);
+// Add Task
 
-  const checkbox = document.createElement('input');
-  checkbox.setAttribute('type', 'checkbox');
-  checkbox.checked = completed;
-  span.appendChild(checkbox);
 
-  const paragraph = document.createElement('p');
-  paragraph.textContent = description;
-  span.appendChild(paragraph);
+AddBtn.addEventListener('click', addTask)
 
-  const ellipsis = document.createElement('i');
-  ellipsis.setAttribute('class', 'fa fa-ellipsis-v');
-  list.appendChild(ellipsis);
+
+toDoList.forEach((e, index) => {
+  const { description } = e;
+ 
+
 });
