@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do List
 
 > In this project, I build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.
 
@@ -15,9 +15,9 @@ My list is a clone of the part of the minimalist project captured in the video b
 - Languages: HTML, CSS, JavaScript
 - Technologies used: HTML, CSS, JavaScript, Webpack 
 
-## Live Demo (if available)
+## Live Demo 
 
-[Live Demo Link](https://olivier-kango.github.io/Awesome-books-ES6/?title=rfrfr&author=rfrfrf)
+[Live Demo Link](http://localhost:8080/)
 
 To get a local copy up and running follow these simple example steps.
 
