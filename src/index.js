@@ -8,6 +8,13 @@ import addTask from './addremove.js';
 
 // Add and Remove
 const AddBtn = document.querySelector('.add-items-btn');
-// const AddItem = document.querySelector('#text-input');
+const AddItem = document.getElementById('text-input');
 
-AddBtn.addEventListener('click', addTask);
+AddBtn.onclick = addTask;
+
+AddItem.addEventListener('keypress', (enter) => {
+  if (enter.key === 'Enter') {
+    enter.preventDefault();
+    AddBtn.onclick();
+  }
+});
