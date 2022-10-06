@@ -13,6 +13,7 @@ body {
   background: white;
   width: 500px;
   margin: 0 auto;
+  box-shadow: 0 2px 5px 2px #3b3b3b2d;
 }
 
 .list {
@@ -77,7 +78,7 @@ input:focus {
   color: black;
 }
 
-button {
+.button {
   border: none;
   height: 50px;
   margin: 0;
@@ -86,7 +87,7 @@ button {
   color: #959595;
 }
 
-button:hover {
+.button:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -95,4 +96,9 @@ button:hover {
   .container {
     width: 90%;
   }
+}
+
+.add-items-btn {
+  background: none;
+  border: none;
 }
