@@ -15,9 +15,7 @@ My list is a clone of the part of the minimalist project captured in the video b
 - Languages: HTML, CSS, JavaScript
 - Technologies used: HTML, CSS, JavaScript, Webpack 
 
-## Live Demo 
-
-[Live Demo Link](http://localhost:8080/)
+## Live Demo
 
 To get a local copy up and running follow these simple example steps.
 
