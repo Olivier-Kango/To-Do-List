@@ -1,14 +1,13 @@
+//import { toFinite } from "lodash";
+
 // Implement a function for adding a new task (add a new element to the array).
 export const toDoList = [];
 
-let i = 0;
 export const addItem = document.getElementById('text-input');
 export default function addTask() {
-  i += 1;
   const ulLists = document.querySelector('.ul-lists');
   const list = document.createElement('li');
   list.setAttribute('class', 'list');
-  list.setAttribute('id', `${i}`);
   ulLists.appendChild(list);
   if (addItem.value === '') {
     list.style.display = 'none';
@@ -31,11 +30,18 @@ export default function addTask() {
   ellipsis.setAttribute('class', 'fa fa-ellipsis-v');
   list.appendChild(ellipsis);
 
-  let hash = {
-    description: addItem.value,
-    index: i,
-    completed: false,
-  }
+  toDoList.push(list);
 
-  toDoList.push(hash);
+  toDoList.forEach((element, index) => {
+    list.setAttribute('id', index+1);
+    
+    element.addEventListener('click', () => {
+        
+        element.style.background = '#fffeca';
+        element.lastElementChild.classList = 'fa fa-trash'; 
+        element.lastElementChild.addEventListener('click', () => { 
+          element.remove();
+        });
+    })
+  });
 }
