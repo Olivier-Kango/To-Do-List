@@ -6,7 +6,7 @@ export const generateElement = (index, completed, description) => {
   const ulLists = document.querySelector('.ul-lists');
   const list = document.createElement('li');
   list.setAttribute('class', 'list');
-  list.setAttribute('id', `list-${index}`);
+  list.setAttribute('id', `${index}`);
   ulLists.appendChild(list);
   const span = document.createElement('span');
   span.setAttribute('class', 'list-check');
@@ -46,11 +46,18 @@ export const removeTask = (lists) => {
       });
       elt.style.background = '#fffeca';
       elt.lastElementChild.classList = 'fa fa-trash';
-      elt.lastElementChild.addEventListener('click', () => {
-        const filter = toDoList.filter((item) => item.index !== elt.id.split('-')[1]);
-        localStorage.setItem('toDoList', JSON.stringify(filter));
-        elt.remove();
-      });
     });
   });
+  for (let i = 0; i < lists.length; i += 1) {
+    lists[i].lastElementChild.addEventListener('click', () => {
+      toDoList.forEach((list) => {
+        if (list.index === Number(lists[i].id)) {
+          const index = toDoList.indexOf(list);
+          toDoList.splice(index, 1);
+          localStorage.setItem('toDoList', JSON.stringify(toDoList));
+        }
+      });
+      lists[i].remove();
+    });
+  }
 };
