@@ -2,6 +2,7 @@ body {
   font-family: Tahoma, sans-serif;
   background: #f6f6f6;
   color: rgb(61, 61, 61);
+  font-weight: 100;
 }
 
 .main-title {
@@ -13,6 +14,7 @@ body {
   background: white;
   width: 500px;
   margin: 0 auto;
+  box-shadow: 0 2px 5px 2px #3b3b3b2d;
 }
 
 .list {
@@ -35,6 +37,7 @@ body {
   border: none;
   font-style: italic;
   font-size: medium;
+  color: rgba(0, 0, 0, 0.516);
 }
 
 input:focus {
@@ -45,6 +48,11 @@ input:focus {
   display: flex;
   gap: 10px;
   padding: 0;
+  width: 94%;
+}
+
+.list-check:nth-child(1) {
+  color: rgba(0, 0, 0, 0.589);
 }
 
 #checkbox {
@@ -70,14 +78,19 @@ input:focus {
 
 .fa-ellipsis-v {
   cursor: move;
+  margin-right: 9px;
+}
+
+.fa-trash {
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .fa:hover {
   color: black;
 }
 
-button {
+.button {
   border: none;
   height: 50px;
   margin: 0;
@@ -86,7 +99,7 @@ button {
   color: #959595;
 }
 
-button:hover {
+.button:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -95,4 +108,19 @@ button:hover {
   .container {
     width: 90%;
   }
+}
+
+.add-items-btn {
+  background: none;
+  border: none;
+}
+
+.fa-refresh {
+  padding-right: 6px;
+}
+
+.para-input:nth-child(2) {
+  border: none;
+  width: 100%;
+  margin: 0;
 }

@@ -1,55 +1,37 @@
 /* eslint-disable no-unused-vars */
-import _ from 'lodash';
+import _, { add } from 'lodash';
 import './style.css';
+import {
+  toDoList, addItem, removeTask, generateElement, update,
+} from './addremove.js';
 /* eslint-enable no-unused-vars */
 
-const toDoList = [
-  {
-    description: 'Wash the dishes',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Food',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Baith',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Sleep',
-    completed: true,
-    index: 4,
-  },
-];
+// Add and Remove
+const addBtn = document.querySelector('.add-items-btn');
+const input = document.querySelector('#text-input');
 
-toDoList.forEach((e) => {
-  const { description, completed, index } = e;
+toDoList.forEach((elt) => {
+  generateElement(elt.index, elt.completed, elt.description);
+  const lists = document.querySelectorAll('.ul-lists li');
+  removeTask(lists);
+  update(lists);
+});
 
-  const ulLists = document.querySelector('.ul-lists');
+const triggerEvent = () => {
+  addItem(input.value, false);
+  input.value = '';
+  const lists = document.querySelectorAll('.ul-lists li');
+  removeTask(lists);
+  update(lists);
+};
 
-  const list = document.createElement('li');
-  list.setAttribute('class', 'list');
-  list.setAttribute('id', index);
-  ulLists.appendChild(list);
+addBtn.addEventListener('click', () => {
+  triggerEvent();
+});
 
-  const span = document.createElement('span');
-  span.setAttribute('class', 'list-check');
-  list.appendChild(span);
-
-  const checkbox = document.createElement('input');
-  checkbox.setAttribute('type', 'checkbox');
-  checkbox.checked = completed;
-  span.appendChild(checkbox);
-
-  const paragraph = document.createElement('p');
-  paragraph.textContent = description;
-  span.appendChild(paragraph);
-
-  const ellipsis = document.createElement('i');
-  ellipsis.setAttribute('class', 'fa fa-ellipsis-v');
-  list.appendChild(ellipsis);
+input.addEventListener('keypress', (enter) => {
+  if (enter.key === 'Enter') {
+    enter.preventDefault();
+    triggerEvent();
+  }
 });
