@@ -4,6 +4,7 @@ import './style.css';
 import {
   toDoList, addItem, removeTask, generateElement, update,
 } from './addremove.js';
+import './interative-list.js';
 /* eslint-enable no-unused-vars */
 
 // Add and Remove
