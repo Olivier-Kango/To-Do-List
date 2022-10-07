@@ -1,8 +1,8 @@
 body {
   font-family: Tahoma, sans-serif;
   background: #f6f6f6;
-  color: rgb(61, 61, 61);
   font-weight: 100;
+  color: rgba(0, 0, 0, 0.671);
 }
 
 .main-title {
@@ -18,7 +18,7 @@ body {
 }
 
 .list {
-  border-bottom: 1px solid #c1c1c3;
+  border-bottom: 1.3px solid #cccccd6c;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -37,7 +37,7 @@ body {
   border: none;
   font-style: italic;
   font-size: medium;
-  color: rgba(0, 0, 0, 0.516);
+  color: rgba(0, 0, 0, 0.546);
 }
 
 input:focus {
@@ -55,13 +55,13 @@ input:focus {
   color: rgba(0, 0, 0, 0.589);
 }
 
-#checkbox {
-  width: 17px;
-  color: #c1c1c3;
+.checkbox {
+  width: 20px;
+  color: #c1c1c38a;
   margin: 0;
 }
 
-#checkbox:hover {
+.checkbox:hover {
   color: black;
   cursor: pointer;
 }
@@ -93,15 +93,17 @@ input:focus {
 .button {
   border: none;
   height: 50px;
+  font-weight: 50;
   margin: 0;
   width: 100%;
   font-size: medium;
-  color: #959595;
+  color: rgba(0, 0, 0, 0.354);
 }
 
 .button:hover {
   text-decoration: underline;
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.546);
 }
 
 @media (max-width: 768px) {
@@ -119,8 +121,10 @@ input:focus {
   padding-right: 6px;
 }
 
-.para-input:nth-child(2) {
+.para-input {
   border: none;
   width: 100%;
   margin: 0;
+  font-size: medium;
+  color: rgba(0, 0, 0, 0.578);
 }

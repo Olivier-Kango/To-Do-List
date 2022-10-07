@@ -14,6 +14,7 @@ export const generateElement = (index, completed, description) => {
 
   const checkbox = document.createElement('input');
   checkbox.setAttribute('type', 'checkbox');
+  checkbox.className = 'checkbox';
   checkbox.checked = completed;
   span.appendChild(checkbox);
 
