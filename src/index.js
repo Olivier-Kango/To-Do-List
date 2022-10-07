@@ -4,7 +4,7 @@ import './style.css';
 import {
   toDoList, addItem, removeTask, generateElement, update,
 } from './addremove.js';
-import './interative-list.js';
+import updateInteractiveList from './interative-list.js';
 /* eslint-enable no-unused-vars */
 
 // Add and Remove
@@ -16,6 +16,7 @@ toDoList.forEach((elt) => {
   const lists = document.querySelectorAll('.ul-lists li');
   removeTask(lists);
   update(lists);
+  updateInteractiveList(lists);
 });
 
 const triggerEvent = () => {
@@ -24,6 +25,7 @@ const triggerEvent = () => {
   const lists = document.querySelectorAll('.ul-lists li');
   removeTask(lists);
   update(lists);
+  updateInteractiveList(lists);
 };
 
 addBtn.addEventListener('click', () => {
