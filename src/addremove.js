@@ -1,47 +1,56 @@
-//import { toFinite } from "lodash";
+export const toDoList = JSON.parse(localStorage.getItem('toDoList')) || [];
 
-// Implement a function for adding a new task (add a new element to the array).
-export const toDoList = [];
+let index = toDoList.length;
 
-export const addItem = document.getElementById('text-input');
-export default function addTask() {
+export const generateElement = (index, completed, description) => {
   const ulLists = document.querySelector('.ul-lists');
   const list = document.createElement('li');
   list.setAttribute('class', 'list');
+  list.setAttribute('id', `list-${index}`);
   ulLists.appendChild(list);
-  if (addItem.value === '') {
-    list.style.display = 'none';
-  }
-
   const span = document.createElement('span');
   span.setAttribute('class', 'list-check');
   list.appendChild(span);
 
   const checkbox = document.createElement('input');
   checkbox.setAttribute('type', 'checkbox');
-  checkbox.checked = false;
+  checkbox.checked = completed;
   span.appendChild(checkbox);
 
   const paragraph = document.createElement('p');
-  paragraph.textContent = addItem.value;
+  paragraph.textContent = description;
   span.appendChild(paragraph);
 
   const ellipsis = document.createElement('i');
   ellipsis.setAttribute('class', 'fa fa-ellipsis-v');
   list.appendChild(ellipsis);
+};
 
-  toDoList.push(list);
+export const addItem = (description, completed) => {
+  const item = { description, index, completed };
+  if (description !== '') {
+    index += 1;
+    item.index = index;
+    toDoList.push(item);
+    localStorage.setItem('toDoList', JSON.stringify(toDoList));
+    generateElement(index, item.completed, item.description);
+  }
+};
 
-  toDoList.forEach((element, index) => {
-    list.setAttribute('id', index+1);
-    
-    element.addEventListener('click', () => {
-        
-        element.style.background = '#fffeca';
-        element.lastElementChild.classList = 'fa fa-trash'; 
-        element.lastElementChild.addEventListener('click', () => { 
-          element.remove();
-        });
-    })
+export const removeTask = (lists) => {
+  lists.forEach((elt) => {
+    elt.addEventListener('click', () => {
+      lists.forEach((elt2) => {
+        elt2.style.background = '';
+        elt2.lastElementChild.setAttribute('class', 'fa fa-ellipsis-v');
+      });
+      elt.style.background = '#fffeca';
+      elt.lastElementChild.classList = 'fa fa-trash';
+      elt.lastElementChild.addEventListener('click', () => {
+        const filter = toDoList.filter((item) => item.index !== elt.id.split('-')[1]);
+        localStorage.setItem('toDoList', JSON.stringify(filter));
+        elt.remove();
+      });
+    });
   });
-}
+};
