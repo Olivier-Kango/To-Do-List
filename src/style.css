@@ -2,6 +2,7 @@ body {
   font-family: Tahoma, sans-serif;
   background: #f6f6f6;
   color: rgb(61, 61, 61);
+  font-weight: 100;
 }
 
 .main-title {
@@ -47,6 +48,11 @@ input:focus {
   display: flex;
   gap: 10px;
   padding: 0;
+  width: 94%;
+}
+
+.list-check:nth-child(1) {
+  color: rgba(0, 0, 0, 0.589);
 }
 
 #checkbox {
@@ -111,4 +117,10 @@ input:focus {
 
 .fa-refresh {
   padding-right: 6px;
+}
+
+.para-input:nth-child(2) {
+  border: none;
+  width: 100%;
+  margin: 0;
 }
