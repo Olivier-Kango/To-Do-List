@@ -17,8 +17,9 @@ export const generateElement = (index, completed, description) => {
   checkbox.checked = completed;
   span.appendChild(checkbox);
 
-  const paragraph = document.createElement('p');
-  paragraph.textContent = description;
+  const paragraph = document.createElement('input');
+  paragraph.value = description;
+  paragraph.setAttribute('class', 'para-input');
   span.appendChild(paragraph);
 
   const ellipsis = document.createElement('i');
@@ -43,8 +44,10 @@ export const removeTask = (lists) => {
       lists.forEach((elt2) => {
         elt2.style.background = '';
         elt2.lastElementChild.setAttribute('class', 'fa fa-ellipsis-v');
+        elt2.querySelector('span').querySelector('.para-input').style.background = '';
       });
       elt.style.background = '#fffeca';
+      elt.querySelector('span').querySelector('.para-input').style.background = '#fffeca';
       elt.lastElementChild.classList = 'fa fa-trash';
     });
   });
@@ -60,4 +63,20 @@ export const removeTask = (lists) => {
       lists[i].remove();
     });
   }
+};
+
+export const update = (lists) => {
+  lists.forEach((elt) => {
+    const input = elt.querySelector('span').querySelector('.para-input');
+
+    elt.addEventListener('input', () => {
+      toDoList.forEach((list) => {
+        if (list.index === Number(elt.id)) {
+          const index = toDoList.indexOf(list);
+          toDoList[index].description = input.value;
+          localStorage.setItem('toDoList', JSON.stringify(toDoList));
+        }
+      });
+    });
+  });
 };
