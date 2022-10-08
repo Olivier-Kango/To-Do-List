@@ -25,7 +25,7 @@ const triggerEvent = () => {
   const lists = document.querySelectorAll('.ul-lists li');
   removeTask(lists);
   update(lists);
-  // updateInteractiveList(lists);
+  updateInteractiveList(lists);
 };
 
 addBtn.addEventListener('click', () => {

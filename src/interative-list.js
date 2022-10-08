@@ -4,8 +4,10 @@ export default function updateInteractiveList(lists) {
   lists.forEach((elt) => {
     const checkbox = elt.querySelector('span').querySelector('.checkbox');
     const content = elt.querySelector('span').querySelector('.para-input');
-    // let check = false;
-    checkbox.addEventListener('click', () => {
+    checkbox.addEventListener('change', () => {
+      content.style.background = 'white';
+      elt.style.background = 'white';
+      elt.lastElementChild.setAttribute('class', 'fa fa-ellipsis-v');
       toDoList.forEach((list) => {
         if (list.index === Number(elt.id)) {
           const index = toDoList.indexOf(list);
@@ -18,6 +20,22 @@ export default function updateInteractiveList(lists) {
           localStorage.setItem('toDoList', JSON.stringify(toDoList));
         }
       });
+    });
+
+    // Clear All items
+    const clear = document.querySelector('.button');
+
+    clear.addEventListener('click', () => {
+      if (checkbox.checked) {
+        elt.remove();
+      }
+
+      for (let index = 0; index < toDoList.length; index += 1) {
+        if (toDoList[index].completed === true) {
+          toDoList.splice(index, 1);
+          localStorage.setItem('toDoList', JSON.stringify(toDoList));
+        }
+      }
     });
   });
 }
