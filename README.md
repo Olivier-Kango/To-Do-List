@@ -2,7 +2,7 @@
 
 # To Do list: add & remove
 
-> In this project, I implement the CRUD (create, read, update, delete) methods. All the elements of the user interface are fully functional.
+> In this project, I implement a Simple To Do List with the CRUD (create, read, update, delete) methods. All the elements of the user interface are fully functional.
 
 ## Screen Short
 
@@ -16,6 +16,8 @@ My list is a clone of the part of the minimalist project captured in the video b
 - Technologies used: HTML, CSS, JavaScript, Webpack 
 
 ## Live Demo
+
+[Link live demo](https://todolist-by-olk.netlify.app/)
 
 To get a local copy up and running follow these simple example steps.
 
