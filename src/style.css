@@ -103,7 +103,7 @@ input:focus {
 .button:hover {
   text-decoration: underline;
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.546);
+  color: black;
 }
 
 @media (max-width: 768px) {
