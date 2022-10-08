@@ -1,7 +1,7 @@
 body {
   font-family: Tahoma, sans-serif;
   background: #f6f6f6;
-  font-weight: 150;
+  font-weight: 250;
   color: rgba(0, 0, 0, 0.671);
 }
 
@@ -126,6 +126,5 @@ input:focus {
   width: 100%;
   margin: 0;
   font-size: medium;
-  font-weight: 150;
   color: rgba(0, 0, 0, 0.578);
 }
