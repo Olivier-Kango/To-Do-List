@@ -1,6 +1,6 @@
 import Read from './read.js';
 
-export default class Delete {
+module.exports class Delete {
   // Delete from the UI
   static #fromUi = (task) => {
     task.remove();
