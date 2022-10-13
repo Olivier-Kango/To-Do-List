@@ -42,5 +42,10 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(<package-name>)/)"
+    ]
   }
 }

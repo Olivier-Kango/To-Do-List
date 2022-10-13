@@ -1,3 +1,9 @@
+/**
+ * @jest-environment jsdom
+ */
+
+// import e from './__mocks__/e.js';
+
 import Create from '../utils/create.js';
 import Delete from '../utils/delete.js';
 

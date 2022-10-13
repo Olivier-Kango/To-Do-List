@@ -1,6 +1,7 @@
+/** @returns {Promise<import('jest').Config>} */
 import Read from './read.js';
 
-export default class Create {
+module.exports class Create {
   // Check for cheked task
   static #checkedtask = (completed) => {
     if (completed) {
