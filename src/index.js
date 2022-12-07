@@ -14,7 +14,6 @@ const input = document.querySelector('#text-input');
 toDoList.forEach((elt) => {
   generateElement(elt.index, elt.completed, elt.description);
   const lists = document.querySelectorAll('.ul-lists li');
-  // console.log(lists);
   removeTask(lists);
   update(lists);
   updateInteractiveList(lists);
@@ -51,21 +50,5 @@ input.addEventListener('keypress', (enter) => {
 const dragArea = document.querySelector('.ul-lists');
 
 Sortable.create(dragArea, {
-  store: {
-    // Get the order of elements. Called once during initialization.
-    // @param   {Sortable}  sortable
-    // @returns {Array}
-    get(sortable) {
-      const order = localStorage.getItem(sortable.options.group.name);
-      // console.log(sortable.el.childNodes)
-      return JSON.parse(order) || [];
-    },
-    // Save the order of elements.
-    // @param {Sortable}  sortable
-    set(sortable) {
-      localStorage.setItem(sortable.options.group.name, JSON.stringify(toDoList));
-    },
-  },
   animation: 350,
-  group: 'toDoList',
 });
