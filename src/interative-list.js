@@ -22,6 +22,12 @@ export default function updateInteractiveList(lists) {
       });
     });
 
+    if (checkbox.checked) {
+      content.style.textDecoration = 'line-through';
+    } else {
+      content.style.textDecoration = 'none';
+    }
+
     // Clear All items
     const clear = document.querySelector('.button');
 
