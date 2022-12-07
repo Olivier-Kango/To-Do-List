@@ -53,15 +53,20 @@ export const removeTask = (lists) => {
     });
   });
   for (let i = 0; i < lists.length; i += 1) {
-    lists[i].lastElementChild.addEventListener('click', () => {
+    lists[i].lastElementChild.addEventListener('click', (e) => {
+      const listNode = e.target.parentNode;
+      listNode.remove();
       toDoList.forEach((list) => {
-        if (list.index === Number(lists[i].id)) {
-          const index = toDoList.indexOf(list);
-          toDoList.splice(index, 1);
+        if (list.index === Number(listNode.id)) {
+          toDoList.splice(toDoList.indexOf(list), 1);
           localStorage.setItem('toDoList', JSON.stringify(toDoList));
         }
       });
-      lists[i].remove();
+    });
+    lists[i].id = i + 1;
+    toDoList.forEach((elt, i) => {
+      elt.index = i + 1;
+      localStorage.setItem('toDoList', JSON.stringify(toDoList));
     });
   }
 };
